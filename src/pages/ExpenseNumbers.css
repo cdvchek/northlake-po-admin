@@ -1,0 +1,295 @@
+.wrapper {
+    flex-direction: row;
+    display: flex;
+}
+
+.expensenumbers-container {
+    /* max-width: 600px; */
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.add-expense-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.add-expense-popup {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.add-expense-button button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-expense-button button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.add-expense-popup {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 100;
+    width: 300px; /* Set a fixed width */
+}
+
+.add-expense-popup input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px; /* Space between the inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.add-expense-popup input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.add-expense-popup button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745; /* Green background for the create button */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-expense-popup button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Space below the search bar */
+}
+
+.search-container input {
+    width: 50%; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em;
+    color: #333; /* Dark grey text color */
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: Add a shadow on focus */
+}
+
+.expense-header, .expense-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expense-item {
+    transition: background-color 0.3s ease, font-size 0.3s ease; /* Smooth transition for background and font size */
+}
+
+/* Adjust flex-basis for each column in the expense item */
+.expense header > div, .expense-item > div {
+    padding: 8px;
+    text-align: left; /* Align text to the left */
+}
+
+.expense-header > div:nth-child(1), .expense-item > div:nth-child(1) {
+    flex-basis: 15%; /* Expense number */
+}
+
+.expense-header > div:nth-child(2),.expense-item > div:nth-child(2) {
+    flex-basis: 40%; /* Description */
+}
+
+.expense-header > div:nth-child(3),.expense-item > div:nth-child(3) {
+    flex-basis: 30%; /* Employee name */
+}
+
+.expense-header > div:nth-child(4),.expense-item > div:nth-child(4) {
+    flex-basis: 15%; /* Delete icon */
+}
+
+.expense-item:nth-child(odd) {
+    background-color: #f9f9f9; /* Light color for odd items */
+}
+
+.expense-item:nth-child(even) {
+    background-color: #e7e7e7; /* Slightly darker color for even items */
+}
+
+.expense-item:hover {
+    background-color: #cccccc; /* Darker background color on hover */
+    font-size: 1.075em; /* Slightly larger font size on hover */
+}
+
+.expense-header {
+    background-color: #f9f9f9; /* Same as .expense-item:nth-child(odd) */
+}
+
+.expense-header > div {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Style for employee names in the expense items */
+.expense-item div.employee-name {
+    cursor: pointer;
+    color: #7851A9; /* Muted blue-green color */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.expense-item div.employee-name:hover {
+    color: #4B0082; /* Slightly darker shade on hover */
+}
+
+.employee-popup {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 100;
+    /* Adjust width, top, and right as needed */
+}
+
+.employee-popup input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.employee-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.employee-popup ul li {
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.employee-popup ul li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Style for the delete icon */
+.expense-item .delete-icon {
+    position: absolute;
+    right: 25px;
+    color: grey; /* Normal state color */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Change color to red when hovering over the expense item */
+.expense-item:hover .delete-icon {
+    color: red; /* Color changes to red on hover */
+}
+
+.delete-confirmation-popup {
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 101;
+    border-radius: 8px;
+    width: 200px; /* Adjust width as necessary */
+    font-family: Arial, sans-serif; /* Optional: change font */
+}
+
+.delete-confirmation-popup p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Style for buttons in the popup */
+.delete-confirmation-popup button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+/* Cancel button */
+.delete-confirmation-popup button.cancel {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.delete-confirmation-popup button.cancel:hover {
+    background-color: #e0e0e0;
+}
+
+/* OK/Delete button */
+.delete-confirmation-popup button.delete {
+    background-color: #ff4d4d; /* Red */
+    color: white;
+}
+
+.delete-confirmation-popup button.delete:hover {
+    background-color: #ff3333; /* Darker red */
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Space above the pagination */
+}
+
+.pagination button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

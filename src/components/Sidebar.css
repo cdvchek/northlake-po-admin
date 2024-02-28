@@ -1,0 +1,48 @@
+.sidebar {
+    width: 200px;
+    height: 100vh; /* Full height */
+    background-color: #333;
+    color: white;
+}
+
+.sidebar h1 {
+    margin-top: 20px; /* Adjust top margin */
+    margin-bottom: 20px; /* Provide space below the header */
+    padding: 10px 20px; /* Add padding around the text */
+    font-size: 1.5em; /* Adjust font size */
+    font-weight: bold; /* Make the font bold */
+    text-align: center; /* Center align the text */
+    border-radius: 5px; /* Optional: rounded corners for the background */
+    color: #fff; /* Text color */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    background-color: #333;
+    border-radius: 0;
+    padding: 10px 0;
+    cursor: pointer;
+    padding-left: 10px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.sidebar ul li:hover {
+    background-color: #404040;
+    padding-left: 30px;
+}
+
+.sidebar a {
+    display: block; /* Make the link a block element */
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,64 @@
+.wrapper {
+    display: flex;
+}
+
+.expense-detail-container {
+    flex-direction: row;
+    padding: 15px; /* Reduced from 20px for a tighter layout */
+    max-width: 1000px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expense-detail-container h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px; /* Adjusted for a more standard heading size */
+}
+
+.expense-detail-container p {
+    line-height: 1.6;
+    color: #666;
+    font-size: 14px; /* Slightly reduced for normal paragraph text */
+}
+
+.receipt-image {
+    max-width: 100%; /* Make the image responsive within its container */
+    max-height: 400px; /* Example max height, adjust as necessary */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.image-container {
+    max-width: 40%; /* Control the width of the image container */
+    display: flex; /* Use flex to center the image vertically and horizontally */
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Optional: Adds some space inside the container */
+}
+
+/* Style the back button */
+.expense-detail-container button {
+    padding: 8px 12px; /* Slightly reduced padding */
+    margin-top: 15px; /* Adjusted margin */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Adjusted font size for button text */
+}
+
+.expense-detail-container button:hover {
+    background-color: #0056b3;
+}
+
+.expense-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Ensure children are spaced out */
+    align-items: flex-start; /* Align items at the top */
+}

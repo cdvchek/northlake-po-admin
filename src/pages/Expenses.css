@@ -1,0 +1,95 @@
+.wrapper {
+    flex-direction: row;
+    display: flex;
+}
+
+.expenses-container {
+    /* max-width: 600px; */
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Space below the search bar */
+}
+
+.search-container input {
+    width: 50%; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em;
+    color: #333; /* Dark grey text color */
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: Add a shadow on focus */
+}
+
+.expense-header, .expense-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expense-item {
+    transition: background-color 0.3s ease, font-size 0.3s ease; /* Smooth transition for background and font size */
+}
+
+.expense-header > div, .expense-item > div {
+    flex-basis: 20%; /* Adjust based on the number of columns */
+    padding: 15px;    
+}
+
+.expense-item:nth-child(odd) {
+    background-color: #f9f9f9; /* Light color for odd items */
+}
+
+.expense-item:nth-child(even) {
+    background-color: #e7e7e7; /* Slightly darker color for even items */
+}
+
+.expense-item:hover {
+    background-color: #cccccc; /* Darker background color on hover */
+    font-size: 1.075em; /* Slightly larger font size on hover */
+}
+
+.expense-header {
+    background-color: #f9f9f9; /* Same as .expense-item:nth-child(odd) */
+}
+
+.expense-header > div {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Space above the pagination */
+}
+
+.pagination button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

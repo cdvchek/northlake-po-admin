@@ -1,0 +1,44 @@
+.item-header, .item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    transition: background-color 0.3s ease, font-size 0.3s ease; /* Smooth transition for background and font size */
+}
+
+.item-header > div, .item > div, .item > input {
+    flex-basis: 50%; /* Adjust based on the number of columns */
+    padding: 15px;    
+}
+
+.item:nth-child(odd) {
+    background-color: #f9f9f9; /* Light color for odd items */
+}
+
+.item:nth-child(even) {
+    background-color: #e7e7e7; /* Slightly darker color for even items */
+}
+
+.item:hover {
+    background-color: #cccccc; /* Darker background color on hover */
+    font-size: 1.075em; /* Slightly larger font size on hover */
+}
+
+.item-header {
+    background-color: #f9f9f9; /* Same as .item:nth-child(odd) */
+}
+
+.item-header > div {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.editable {
+    border: none;
+    background: none;
+}
+
+.editable:focus {
+    outline: none;
+}
